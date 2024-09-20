@@ -1,0 +1,14 @@
+service: 'service:Summarization'
+labels:
+  owner: ijcruic
+  project: Localized text summarization tutorial
+include:
+  - '*.py'
+  - 'summarization_model/'
+python:
+  packages:
+    - torch
+    - transformers
+  #requirements_txt: "requirements.txt"
+docker:
+  cuda_version: "12.1"
